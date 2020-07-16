@@ -72,3 +72,10 @@ spec:
           initialDelaySeconds: {{ .probeDelay }}
           timeoutSeconds: {{ .probeTimeout }}
         {{- end }}
+        volumeMounts:
+        - name: {{ .Values.applicationName }}-secret-volume
+          mountPath: /deployments/config
+      volumes:                                                      
+        - name: {{ .Values.applicationName }}-secret-volume
+          secret:
+            secretName: {{ .Values.applicationName }}-secret
