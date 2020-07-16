@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  simple-java-service:
+  - apiVersion: v2
+    appVersion: 1.8.0
+    created: "2020-07-16T12:08:26.962706585+02:00"
+    description: A Helm chart for deploying simple Java services in Openshift Container
+      Platorm 4.
+    digest: cd5dc1a63b072196c3294cc9926dfe92bc93050cd9dc333ddeff60ac07553192
+    maintainers:
+    - name: Ramón Román Nissen
+      url: https://github.com/rromannissen
+    name: simple-java-service
+    type: application
+    urls:
+    - simple-java-service-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-07-16T12:08:26.96152177+02:00"
