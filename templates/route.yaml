@@ -1,6 +1,5 @@
 kind: Route
 apiVersion: route.openshift.io/v1
-id: "{{ .Values.applicationName }}-https"
 metadata:
   name: {{ .Values.applicationName }}-https
   labels:
@@ -11,5 +10,6 @@ spec:
   host: ""
   to:
     name: {{ .Values.applicationName }}
+    kind: Service
   tls:
     termination: edge
