@@ -1,5 +1,5 @@
 kind: Route
-apiVersion: v1
+apiVersion: route.openshift.io/v1
 id: "{{ .Values.applicationName }}-https"
 metadata:
   name: {{ .Values.applicationName }}-https

@@ -1,5 +1,5 @@
 kind: DeploymentConfig
-apiVersion: v1
+apiVersion: apps.openshift.io/v1
 metadata:
   name: {{ .Values.applicationName }}
   labels:
@@ -75,7 +75,7 @@ spec:
         volumeMounts:
         - name: {{ .Values.applicationName }}-secret-volume
           mountPath: /deployments/config
-      volumes:                                                      
+      volumes:
         - name: {{ .Values.applicationName }}-secret-volume
           secret:
             secretName: {{ .Values.applicationName }}-secret
