@@ -45,8 +45,7 @@ spec:
         env:
           {{- toYaml . | nindent 12 }}
         {{- end }}
-
-        resources:
+        resources: {{ if not .Values.limits}}{}{{end}}
           {{- if .Values.limits }}
           limits:
             cpu: {{ .Values.limits.cpu }}
