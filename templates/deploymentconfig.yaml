@@ -5,7 +5,8 @@ metadata:
   labels:
     app: {{ .Values.applicationName }}
 spec:
-  triggers: []
+  triggers:
+    - type: ConfigChange
   strategy:
     type: {{ .Values.deploymentStrategy.type }}
     {{- if eq .Values.deploymentStrategy.type "rolling" }}
